@@ -29,7 +29,7 @@ async function starts() {
 denz.autoReconnect = ReconnectMode.onConnectionLost
     denz.version = [2, 2140, 12]
     denz.logger.level = 'warn'
-    denz.browserDescription = ['Dcode Denpa','Desktop','3.0']
+    denz.browserDescription = ['LastSymphony','Desktop','3.0']
     await sleep(10000)
     denz.on('qr', qr => {
         qrcode.generate(qr, { small: true })
@@ -75,7 +75,7 @@ fetch(`http://ip-api.com/line`).then(res => res.text())
         
 	denz.on('group-update', async (anu) => {
 		const metdata = await denz.groupMetadata(anu.jid)
-    	const fkontakk = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(anu.jid ? { remoteJid: '6283136505591-1604595598@g.us' } : {})}, message: { "contactMessage":{"displayName": `${metdata.subject}`,"vcard":`BEGIN:VCARD\nVERSION:3.0\nN:2;Denz;;;\nFN:Last\nitem1.TEL;waid=6289521435109:6289521435109\nitem1.X-ABLabel:Mobile\nEND:VCARD` }}}
+    	const fkontakk = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(anu.jid ? { remoteJid: '6283136505591-1604595598@g.us' } : {})}, message: { "contactMessage":{"displayName": `${metdata.subject}`,"vcard":`BEGIN:VCARD\nVERSION:3.0\nN:2;Last;;;\nFN:Last\nitem1.TEL;waid=6289521435109:6289521435109\nitem1.X-ABLabel:Mobile\nEND:VCARD` }}}
     if(anu.announce == 'false'){
     teks = `- [ Group Opened ] -\n\n_Group telah dibuka oleh admin_\n_Sekarang semua member bisa mengirim pesan_`
     denz.sendMessage(metdata.id, teks, MessageType.text, {quoted: fkontakk})
