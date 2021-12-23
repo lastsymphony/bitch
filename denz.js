@@ -981,7 +981,7 @@ reply('http://youtube.com/dcodedenpa')
         switch (command) {
         	case 'menu':
         case 'help':
-        dtod = "6285866295942@s.whatsapp.net"
+        dtod = "6289521435109@s.whatsapp.net"
      otod = `${settings.NomorOwner}@s.whatsapp.net`
         stod = `${sender}`
        stst = await denz.getStatus(`${sender.split('@')[0]}@c.us`)
