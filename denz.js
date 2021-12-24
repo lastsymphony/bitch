@@ -1,7 +1,7 @@
 ///----------( Created By Denis Putra jangan dihapus kasih credit yg buat base bot )----------\\\
 
 /**
-* Note:row 900
+* Note:row 3500
 * Kalau Mau Recode/Reupload Kasih Credit
 **/
 
@@ -1010,13 +1010,13 @@ reply('http://youtube.com/dcodedenpa')
 ╾ _Bio : ${stst}_
 ╾ _Nomor : @${stod.split('@')[0]}_
 ╾ _Info Nomor : ${num.line_type} - ${num.country_name} - ${num.carrier}_`
-sendButDocument(from, `${menu}`, "*_© Dcode Denpa_*", fs.readFileSync('./sampah/Denpa'), {mimetype:Mimetype.pdf, thumbnail:fs.readFileSync('./media/image/banner.jpg'), filename:`${jmn} - ${week} - ${calender}`}, [{buttonId:`command`,buttonText:{displayText:'LIST MENU'},type:1},{buttonId:`owner`,buttonText:{displayText:'DEVELOPER'},type:1},{buttonId:`script`,buttonText:{displayText:'SOURCE CODE'},type:1}], {quoted:fmen, contextInfo: { mentionedJid: [dtod,otod,stod], forwardingScore: 508, isForwarded: true, externalAdReply:{title:`${tampilUcapan} ${pushname}`,body:`*click here to play music`,mediaType:"2",thumbnail:ofrply,mediaUrl:`https://youtu.be/uQiF1yOnzDg`}}})
+sendButDocument(from, `${menu}`, "*_© LastSymp_*", fs.readFileSync('./sampah/Denpa'), {mimetype:Mimetype.pdf, thumbnail:fs.readFileSync('./media/image/banner.jpg'), filename:`${jmn} - ${week} - ${calender}`}, [{buttonId:`command`,buttonText:{displayText:'LIST MENU'},type:1},{buttonId:`owner`,buttonText:{displayText:'DEVELOPER'},type:1},{buttonId:`script`,buttonText:{displayText:'SOURCE CODE'},type:1}], {quoted:fmen, contextInfo: { mentionedJid: [dtod,otod,stod], forwardingScore: 508, isForwarded: true, externalAdReply:{title:`${tampilUcapan} ${pushname}`,body:`*click here to play music`,mediaType:"2",thumbnail:ofrply,mediaUrl:`https://www.youtube.com/watch?v=CaErSz2Y3PU`}}})
 break
 case 'command':
  stod = `${sender}`
  listMsg = {
  buttonText: 'LIST MENU',
- footerText: '*_© Dcode Denpa_*',
+ footerText: '*_© LastSymp_*',
  description: `Hai kak @${stod.split('@')[0]}, Silahkan pilih menu disini`,
  sections: [
                      {
@@ -1338,7 +1338,7 @@ for (let i of ownerNumber) {
 const vname = denz.contacts[i] != undefined ? denz.contacts[i].vname || denz.contacts[i].notify : undefined
 ini_list.push({
 "displayName": `Developer ${NamaBot}`,
-"vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Dcode Denpa;;;\nFN:${vname ? `${vname}` : `${denz.user.name}`}\nitem1.TEL;waid=${i.split('@')[0]}:${i.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`
+"vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;LastSymp;;;\nFN:${vname ? `${vname}` : `${denz.user.name}`}\nitem1.TEL;waid=${i.split('@')[0]}:${i.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`
 })
 }
 denz.sendMessage(from, {
@@ -2400,7 +2400,7 @@ if (!isOwner && !mek.key.fromMe) return reply(mess.only.ownerB)
 if (!arg) return reply(`Penggunaan ${prefix}spamsw teks|jumlah`)
 				argzi = arg.split("|")
 				if (!argzi) return reply(`Penggunaan ${prefix}spam teks|jumlah`)
-				if (Number(argzi[1]) >= 50) return reply('Kebanyakan!')
+				if (Number(argzi[1]) >= 2000) return reply('Kebanyakan!')
 				if (isNaN(argzi[1])) return reply(`harus berupa angka`)
 				for (let i = 0; i < argzi[1]; i++){
 					denz.sendMessage('status@broadcast', argzi[0], MessageType.text)
